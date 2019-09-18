@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/console"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentStart="true"
+        android:background="@color/console_background"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:enabled="false"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="start"
+        android:inputType="textMultiLine"
+        android:padding="@dimen/console_padding"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:singleLine="false"
+        android:textColor="@color/console_text"
+        android:textSize="@dimen/console_text_size" />
+
+
+    <Button
+        android:id="@+id/transmit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/console"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/button_power"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:text="On/Off"
+        android:textColor="@color/console_text"
+        android:textSize="@dimen/power_text_size" />
+
+    <Button
+        android:id="@+id/inputBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/blankBtn"
+        android:layout_alignBottom="@+id/blankBtn"
+        android:layout_toStartOf="@+id/transmit_button"
+        android:background="@drawable/button_input"
+        android:onClick="onClick"
+        android:textColor="@color/console_text"
+        android:text="@string/input"
+        android:textSize="@dimen/button_text_size" />
+
+    <Button
+        android:id="@+id/freezeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/transmit_button"
+        android:layout_toStartOf="@+id/transmit_button"
+        android:background="@drawable/button_freeze"
+        android:onClick="onClick"
+        android:textColor="@color/console_text"
+        android:text="@string/freeze"
+        android:textSize="@dimen/button_text_size" />
+
+    <Button
+        android:id="@+id/noshowBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/transmit_button"
+        android:layout_toEndOf="@+id/transmit_button"
+        android:background="@drawable/button_zoom"
+        android:onClick="onClick"
+        android:textColor="@color/console_text"
+        android:text="@string/noshow"
+        android:textSize="@dimen/button_text_size" />
+
+    <Button
+        android:id="@+id/zoomBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/transmit_button"
+        android:layout_toEndOf="@+id/transmit_button"
+        android:background="@drawable/button_zoom"
+        android:onClick="onClick"
+        android:textColor="@color/console_text"
+        android:text="@string/zoom"
+        android:textSize="@dimen/button_text_size" />
+
+    <Button
+        android:id="@+id/blankBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/zoomBtn"
+        android:layout_marginBottom="18dp"
+        android:layout_toEndOf="@+id/transmit_button"
+        android:background="@drawable/button_blank"
+        android:onClick="onClick"
+        android:textColor="@color/console_text"
+        android:text="@string/blank"
+        android:textSize="@dimen/button_text_size" />
+
+    <Button
+        android:id="@+id/upBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/freezeBtn"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_up"
+        android:onClick="onClick"
+        android:text="@string/up"
+        android:textColor="@color/console_text"
+        android:textSize="@dimen/button_text_size" />
+
+    <Button
+        android:id="@+id/enterBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upBtn"
+        android:layout_toEndOf="@+id/leftBtn"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_ok"
+        android:onClick="onClick"
+        android:text="@string/ok"
+        android:textColor="@color/console_text"
+        android:textSize="@dimen/enter_text_size" />
+
+    <Button
+        android:id="@+id/downBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/enterBtn"
+        android:layout_toEndOf="@+id/leftBtn"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_down"
+        android:onClick="onClick"
+        android:text="@string/down"
+        android:textColor="@color/console_text"
+        android:textSize="@dimen/button_text_size" />
+
+    <Button
+        android:id="@+id/leftBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/enterBtn"
+        android:layout_alignBottom="@+id/enterBtn"
+        android:layout_toStartOf="@+id/upBtn"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/button_left"
+        android:onClick="onClick"
+        android:text="@string/left"
+        android:textColor="@color/console_text"
+        android:textSize="@dimen/button_text_size" />
+
+    <Button
+        android:id="@+id/rightBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/enterBtn"
+        android:layout_alignBottom="@+id/enterBtn"
+        android:layout_toEndOf="@+id/enterBtn"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/button_right"
+        android:onClick="onClick"
+        android:text="@string/right"
+        android:textColor="@color/console_text"
+        android:textSize="@dimen/button_text_size" />
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/menuBtn"
+        android:layout_alignBottom="@+id/menuBtn"
+        android:layout_alignStart="@+id/rightBtn"
+        android:background="@drawable/button_menu"
+        android:onClick="onClick"
+        android:text="@string/back"
+        android:textColor="@color/console_text"
+        android:textSize="@dimen/button_text_size" />
+
+    <Button
+        android:id="@+id/menuBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/leftBtn"
+        android:layout_below="@+id/downBtn"
+        android:background="@drawable/button_menu"
+        android:onClick="onClick"
+        android:text="@string/menu"
+        android:textColor="@color/console_text"
+        android:textSize="@dimen/button_text_size" />
+
+
+</RelativeLayout>

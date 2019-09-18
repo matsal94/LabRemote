@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.obd.infrared.sample.SettingsActivity"
+    tools:showIn="@layout/activity_settings"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/saleTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toStartOf="@+id/przelacznikSW"
+            android:hint="login"
+            android:text="@string/salespinner"
+            android:textSize="15sp"
+            android:typeface="serif"
+            android:textStyle="bold" />
+
+        <Switch
+            android:id="@+id/przelacznikSW"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/saleSpn"
+            android:layout_alignEnd="@+id/sciezkatytulTV"
+            android:layout_alignTop="@+id/saleTV"
+            android:onClick="swClick" />
+
+        <Spinner
+            android:id="@+id/saleSpn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/versionTV"
+            android:layout_alignStart="@+id/saleTV"
+            android:layout_below="@+id/saleTV"
+            android:textColor="@color/colorAkcent" />
+
+        <View
+            android:id="@+id/sep1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/przelacznikSW"
+            android:layout_marginTop="15dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/loginTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/saleTV"
+            android:layout_below="@+id/sep1"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:hint="login"
+            android:text="@string/login_tytul"
+            android:typeface="serif"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/loginTV"
+            android:layout_below="@+id/loginTV"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/button_login"
+            android:elegantTextHeight="true"
+            android:gravity="left"
+            android:hint="@string/login"
+            android:onClick="PopupClick"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAkcent"
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="15sp"/>
+
+        <View
+            android:id="@+id/sep2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignBottom="@+id/loginBtn"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/sciezkatytulTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sep2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/ścieżka"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sciezkaTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/sciezkatytulTV"
+            android:layout_alignStart="@+id/sciezkatytulTV"
+            android:layout_below="@+id/sciezkatytulTV"
+            android:layout_marginTop="10dp"
+            android:text="@string/sciezkaTV" />
+
+        <Button
+            android:id="@+id/importBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/sciezkatytulTV"
+            android:layout_alignStart="@+id/sciezkatytulTV"
+            android:layout_below="@+id/sciezkaTV"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/button_import"
+            android:onClick="ZaimportujClick"
+            android:text="@string/zaimportuj"
+            android:textColor="@color/colorAkcent" />
+
+        <View
+            android:id="@+id/sep3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/importBtn"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/sciezka2tytulTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/importBtn"
+            android:layout_alignStart="@+id/importBtn"
+            android:layout_below="@+id/sep3"
+            android:layout_marginTop="10dp"
+            android:text="@string/ścieżka2"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sciezka2TV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/sciezka2tytulTV"
+            android:layout_alignStart="@+id/sciezka2tytulTV"
+            android:layout_below="@+id/sciezka2tytulTV"
+            android:layout_marginTop="10dp"
+            android:text="@string/sciezka2TV" />
+
+        <Button
+            android:id="@+id/import2Btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/sciezka2TV"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/button_import"
+            android:onClick="ZaimportujClick"
+            android:text="@string/zaimportuj"
+            android:textColor="@color/colorAkcent" />
+
+        <View
+            android:id="@+id/sep4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/import2Btn"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/versiontytulTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/import2Btn"
+            android:layout_below="@+id/sep4"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/version"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/versionTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/versiontytulTV"
+            android:layout_below="@+id/versiontytulTV"
+            android:ems="10"
+            android:enabled="false"
+            android:text="@string/app_version"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/sep5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/versionTV"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/abouttytulTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/sep5"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/about"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/aboutTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/abouttytulTV"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/large_text" />
+
+
+    </RelativeLayout>
+
+</ScrollView>
+

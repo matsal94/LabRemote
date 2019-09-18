@@ -1,0 +1,11 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="console_text_size">17sp</dimen>
+    <dimen name="power_text_size">25sp</dimen>
+    <dimen name="enter_text_size">20sp</dimen>
+    <dimen name="button_text_size">17sp</dimen>
+    <dimen name="console_padding">3dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+</resources>
